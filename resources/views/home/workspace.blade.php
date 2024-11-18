@@ -15,6 +15,8 @@
     <div class="row">
         <div class="col-12" style="border: 2px solid green;">
             <button id="container-btn">Container</button>
+            <button id="placeholder-btn">Placeholder</button>
+            <button id="qr-btn">Image</button>
         </div>
     </div>
     <div class="row" style="height: 70vh;">
