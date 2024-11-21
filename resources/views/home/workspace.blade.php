@@ -11,12 +11,12 @@
 
 <body>
 
-    <h1>Workspace</h1>
+    <h1 class="text-center">Workspace</h1>
     <div class="row">
-        <div class="col-12 dropdown" style="border: 2px solid green;">
-            <button id="container-btn">Container</button>
-            <button id="placeholder-btn">Placeholder</button>
-            <button id="qr-btn">Image</button>
+        <div class="col-12 d-flex gap-2 justify-content-center py-2 dropdown" style="border: 2px solid green;">
+            <button class="btn btn-success" id="container-btn">Container</button>
+            <button class="btn btn-success" id="placeholder-btn">Placeholder</button>
+            <button class="btn btn-success" id="qr-btn">Image</button>
         </div>
     </div>
     <div class="row" style="height: 80vh;">
@@ -26,8 +26,8 @@
 
         <div class="col-3 overflow-auto" style="border: 2px solid blue; height: 80vh">
             <!-- Sidebar Container -->
-            <div class="row">
-                <h3>Element: <span>container1</span></h3>
+            <div class="row text-center">
+                <h3 style="padding-left: 0;"><span id="selected-container"></span></h3>
             </div>
             <div class="font-div">
                 <div class="row">
@@ -39,7 +39,16 @@
                     <div class="col-12 mb-2">
                         <div class="collapse multi-collapse" id="font-container">
                             <div class="card card-body">
-                                Some placeholder content for the first collapse component of this multi-collapse example. This panel is hidden by default but revealed when the user activates the relevant trigger.
+                                <ul style="list-style: none;">
+                                    <li>Font Family:
+                                        <select id="fontPicker">
+                                            <option value="Arial">Arial</option>
+                                            <option value="Courier New">Courier New</option>
+                                            <option value="Times New Roman">Times New Roman</option>
+                                        </select>
+                                    </li>
+                                    <li>Font Size: <input type="range" id="fontSizePicker" value="20" min="5" max="100" step="1"></li>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -47,7 +56,7 @@
             </div>
             <div class="fill-div">
                 <div class="row">
-                    <div class="col-12 text-left">
+                    <div class="col-12">
                         <a class="btn btn-primary w-75" data-bs-toggle="collapse" href="#fill-container" role="button">Fill</a>
                     </div>
                 </div>
@@ -55,7 +64,7 @@
                     <div class="col-12 mb-2">
                         <div class="collapse multi-collapse" id="fill-container">
                             <div class="card card-body">
-                                Some placeholder content for the first collapse component of this multi-collapse example. This panel is hidden by default but revealed when the user activates the relevant trigger.
+                                <input name="color-picker" id="colorPicker" type="color" />
                             </div>
                         </div>
                     </div>
@@ -73,7 +82,10 @@
                     <div class="col-12">
                         <div class="collapse multi-collapse" id="sizing-container">
                             <div class="card card-body">
-                                Some placeholder content for the first collapse component of this multi-collapse example. This panel is hidden by default but revealed when the user activates the relevant trigger.
+                                <ul style="list-style: none;">
+                                    <li>Width: <span id="container-width">-</span> px</li>
+                                    <li>Height: <span id="container-height">-</span> px</li>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -89,15 +101,17 @@
                     <div class="col-12 mb-2">
                         <div class="collapse multi-collapse" id="position-container">
                             <div class="card card-body">
-                                Some placeholder content for the first collapse component of this multi-collapse example. This panel is hidden by default but revealed when the user activates the relevant trigger.
+                                <ul style="list-style: none;">
+                                    <li>X-position: <span id="container-x"></span></li>
+                                    <li>Y-position: <span id="container-y"></span></li>
+                                </ul>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
+            </div>
         </div>
-    </div>
 
 </body>
 
